@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
-import './Header.css';
-import { NavLink, Link } from 'react-router-dom';
-import Logo from '/src/assets/Logo.svg';
+import React, { useContext, useEffect, useState } from 'react';
+import { CiSearch } from 'react-icons/ci';
+import { FaShoppingBag } from 'react-icons/fa';
+import { FiMenu } from 'react-icons/fi';
+import { Link, NavLink } from 'react-router-dom';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
-import { FiMenu } from 'react-icons/fi';
-import { FaShoppingBag } from 'react-icons/fa';
-import { CiSearch } from 'react-icons/ci';
-import Hope from '/src/assets/hope.jpg';
-import Reckless from '/src/assets/Reckless.png';
+import './Header.css';
 import Overthinker from '/src/assets/DOTI.jpeg';
+import Reckless from '/src/assets/Reckless.png';
+import Hope from '/src/assets/hope.jpg';
+import Logo from '/src/assets/logo.png';
 
 import Cart from '../Cart/Cart.jsx';
 import Modal from '../Modal/Modal.jsx';
@@ -26,17 +26,17 @@ function Header() {
       price: 38000,
     },
     {
-      id: 3,
-      title: 'Reckless',
-      image: Reckless,
-      para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
-      price: 38000,
-    },
-    {
       id: 2,
       title: 'Overthinker',
       image: Overthinker,
       para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
+      price: 38000,
+    },
+    {
+      id: 3,
+      title: 'Reckless',
+      image: Reckless,
+      para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
       price: 38000,
     },
 
@@ -115,7 +115,7 @@ function Header() {
             About Us
           </NavLink> */}
         </div>
-        <div className="search-container">
+        {/* <div className="search-container">
           <CiSearch
             style={{
               height: '28px',
@@ -158,7 +158,7 @@ function Header() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="icons-container">
         <button

@@ -1,6 +1,6 @@
 .footer {
-  background-color: #000000;
-  color: white;
+  background-color: turquoise;
+  color: black;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -41,7 +41,7 @@
 }
 
 .social-link {
-  color: white;
+  color: black;
   cursor: pointer;
   text-decoration: none;
   margin: 0 15px; /* Increased margin for better spacing between links */
