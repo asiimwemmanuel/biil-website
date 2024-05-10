@@ -1,0 +1,51 @@
+/* .models{
+  background-image: url(../../assets/Models.png);
+} */
+
+.cardDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 5px; */
+    margin-top: -40px;
+    flex-wrap: wrap;
+}
+
+.models-pic {
+  width: 100%;
+  height: 95vh;
+  margin-top: 11vh;
+  /* height:750px; */
+  /* margin-top: 70px; */
+  object-fit: cover;
+  /* The image used */
+  background-image: url(../../assets/apartments.jpeg);
+  will-change: transform;
+  /* transform: translateZ(0); */
+  /* Set a specific height */
+  min-height: 90vh; 
+  /* Create the parallax scrolling effect */
+  /* background-attachment:fixed;  */
+  background-position: top center; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+}
+
+
+/* @media screen and (max-width:1000px){
+  .cardDiv{
+    flex-direction: column;
+  }
+} */
+
+@media screen and (max-width:660px){
+  .models-pic{
+    background-image: url(../../assets/Models-pic-phone.jpeg);
+  background-position: top left; 
+
+  }
+}
+
