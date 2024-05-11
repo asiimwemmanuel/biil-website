@@ -80,8 +80,41 @@ function Header() {
     return { totalQuantity, totalCost };
   };
 
+  window.addEventListener('scroll', function () {
+    let logo = document.querySelector('.logo');
+    let NavLink = document.querySelectorAll('.NavLink');
+    let contactBtn = document.querySelector('.contact-btn');
+    let scrollPosition = window.scrollY;
+
+    // Adjust this value to determine when to trigger the color change
+    let triggerHeight = 580;
+    console.log(scrollPosition);
+
+    if (scrollPosition > triggerHeight && scrollPosition < 1270) {
+      logo.style.color = '#5a5a5a';
+      contactBtn.style.color = '#ffffff';
+      contactBtn.style.borderColor = '#ffffff';
+      NavLink[0].style.color = '#ffffff';
+      NavLink[1].style.color = '#ffffff';
+    } else if (scrollPosition > 1270) {
+      // Reset the color if the scroll position is below the trigger height
+      logo.style.color = '#ffffff'; // This will revert to the default color defined in your CSS
+      NavLink[0].style.color = '#ffffff';
+      NavLink[1].style.color = '#ffffff';
+      // NavLink[0].style.color = '#5a5a5a';
+      // NavLink[1].style.color = '#5a5a5a';
+    } else {
+      contactBtn.style.color = '#5a5a5a';
+      contactBtn.style.borderColor = '#5a5a5a';
+      NavLink[0].style.color = '#5a5a5a';
+      NavLink[1].style.color = '#5a5a5a';
+      logo.style.color = '#ffffff';
+    }
+  });
+
   return (
     <div className="header">
+      <div className="backdrop"></div>
       {ctx.isDrop ? <DropDown /> : ''}
       {ctx.modal ? <Cart /> : ''}
       {ctx.contactCard ? <Modal /> : ''}
@@ -110,7 +143,7 @@ function Header() {
             About Us
           </NavLink>
         </div>
-        <div className="search-container">
+        {/* <div className="search-container">
           <CiSearch
             style={{
               height: '28px',
@@ -153,7 +186,7 @@ function Header() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="icons-container">
         <button

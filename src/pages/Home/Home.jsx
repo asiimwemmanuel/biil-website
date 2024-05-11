@@ -19,7 +19,9 @@ function Home() {
       const handleScroll = () => {
         const scrollTop = window.scrollY;
         const modelsPic = document.querySelector('.models-pic');
+        const modelsPic2 = document.querySelector('.models-pic2');
         modelsPic.style.backgroundPositionY = `${scrollTop * 0.5}px`; // Adjust the parallax effect speed as needed
+        modelsPic2.style.backgroundPositionY = `${scrollTop * -0.1}px`; // Adjust the parallax effect speed as needed
       };
 
       window.addEventListener('scroll', handleScroll);
@@ -121,7 +123,7 @@ function Home() {
   return (
     <div
       style={{
-        backgroundColor: 'black',
+        // backgroundColor: 'black',
         color: 'white',
         width: '100vw',
         position: 'absolute',
@@ -130,7 +132,49 @@ function Home() {
         left: 0,
       }}
     >
-      <Header /> <div className="models-pic" />
+      <Header />
+      <div className="models-pic" />
+      <div className="text-block-1">
+        <h1
+          style={{
+            margin: 0,
+            fontSize: '40px',
+            fontFamily: '"Crimson Text", serif',
+          }}
+        >
+          BIIL <p className="logo-word">House.</p>
+        </h1>
+        <p
+          style={{
+            maxWidth: '350px',
+            lineHeight: '40px',
+            margin: '20px',
+            fontWeight: 650,
+            fontSize: '20px',
+          }}
+          className="text-block-1-text"
+        >
+          Welcome to BIIL House, where luxury meets convenience. Experience
+          comfort and style in every corner of your new home.
+        </p>
+      </div>
+      <div className="models-pic2">
+        <div className="text-block-2">
+          <p
+            style={{
+              maxWidth: '350px',
+              lineHeight: '40px',
+              margin: '20px',
+              fontWeight: 650,
+              fontSize: '20px',
+            }}
+          >
+            Discover the epitome of urban living at BIIL House. Unravel a
+            lifestyle that exceeds expectations. Welcome home to luxury
+            redefined.
+          </p>
+        </div>
+      </div>
       <ScrollDownButton />
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
       <div

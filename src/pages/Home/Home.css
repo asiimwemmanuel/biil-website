@@ -12,15 +12,86 @@
     flex-wrap: wrap;
 }
 
+.text-block-1{
+  height: 100vh;
+  width:45vw;
+  background-color: #ffffffb7;
+  position:absolute;
+  bottom:0;
+  right:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+  background-color: gba(70,72,74,0.1) !important; 
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(200%) blur(5px);
+}
+
+.text-block-1-text{
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.text-block-2{
+  height: 100%;
+  width:55vw;
+  background-color: #ffffffd2;
+  position:relative;
+  left:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+  background-color: gba(70,72,74,0.1) !important; 
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(200%) blur(5px);
+}
+
 .models-pic {
   width: 100%;
-  height: 95vh;
-  margin-top: 11vh;
+  height: 100vh;
+  /* margin-top: 11vh; */
   /* height:750px; */
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/apartments.jpeg);
+  background-image: url(../../assets/apartments-2.jpeg);
+  will-change: transform;
+  /* transform: translateZ(0); */
+  /* Set a specific height */
+  min-height: 90vh; 
+  /* Create the parallax scrolling effect */
+  /* background-attachment:fixed;  */
+  background-position: top center; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+}
+
+.models-pic2 {
+  width: 100%;
+  height: 100vh;
+  /* margin-top: 11vh; */
+  /* height:750px; */
+  /* margin-top: 70px; */
+  object-fit: cover;
+  /* The image used */
+  background-image: url(../../assets/apartments-3.webp);
   will-change: transform;
   /* transform: translateZ(0); */
   /* Set a specific height */
@@ -40,12 +111,30 @@
     flex-direction: column;
   }
 } */
-
+/* 
 @media screen and (max-width:660px){
   .models-pic{
     background-image: url(../../assets/Models-pic-phone.jpeg);
   background-position: top left; 
 
+  }
+} */
+
+
+@media screen and (max-width:900px){
+  .text-block-1{
+    width:100vw;
+    height:40vh;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .text-block-2{
+    width:100vw;
+    height:35vh;
+    top:400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
