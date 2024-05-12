@@ -86,89 +86,166 @@ function Home() {
       }}
     >
       <Header />
-      <Parallax translateY={[-40, 40]}>
-        <div className="models-pic">
-          <div className="text-block-1">
-            <h1
-              style={{
-                margin: 0,
-                fontSize: '40px',
-                fontFamily: '"Crimson Text", serif',
-              }}
-            >
-              BIIL <p className="logo-word">House.</p>
-            </h1>
-            <p
-              style={{
-                maxWidth: '350px',
-                lineHeight: '40px',
-                margin: '20px',
-                fontWeight: 650,
-                fontSize: '18px',
-              }}
-              className="text-block-1-text"
-            >
-              Welcome to BIIL House, where luxury meets convenience. Comfort and
-              style in every corner of your new home.
-            </p>
-          </div>
+      {window.innerWidth > 900 ? (
+        <div>
+          {' '}
+          <Parallax translateY={[-40, 40]}>
+            <div className="models-pic">
+              <div className="text-block-1">
+                <h1
+                  style={{
+                    margin: 0,
+                    fontSize: '40px',
+                    fontFamily: '"Crimson Text", serif',
+                  }}
+                >
+                  BIIL <p className="logo-word">House.</p>
+                </h1>
+                <p
+                  style={{
+                    maxWidth: '350px',
+                    lineHeight: '40px',
+                    margin: '20px',
+                    fontWeight: 650,
+                    fontSize: '18px',
+                  }}
+                  className="text-block-1-text"
+                >
+                  Welcome to BIIL House, where luxury meets convenience. Comfort
+                  and style in every corner of your new home.
+                </p>
+              </div>
+            </div>
+          </Parallax>
+          <Parallax translateY={[0, -200]}>
+            <div className="models-pic2">
+              <div className="text-block-2">
+                <p
+                  style={{
+                    maxWidth: '350px',
+                    lineHeight: '40px',
+                    margin: '20px',
+                    fontWeight: 650,
+                    fontSize: '18px',
+                  }}
+                >
+                  Discover the epitome of urban living at BIIL House. Unravel a
+                  lifestyle that exceeds expectations. Welcome home to luxury
+                  redefined.
+                </p>
+              </div>
+            </div>
+          </Parallax>
+          <Parallax translateY={[-50, -700]}>
+            <div className="models-pic3">
+              <div className="text-block-3">
+                <p
+                  style={{
+                    maxWidth: '350px',
+                    lineHeight: '40px',
+                    margin: '20px',
+                    fontWeight: 650,
+                    fontSize: '18px',
+                  }}
+                >
+                  Experience unparalleled comfort and style in the heart of the
+                  city. Welcome home to{' '}
+                  <span
+                    style={{
+                      margin: 0,
+                      fontFamily: '"Crimson Text", serif',
+                      fontSize: '25px',
+                    }}
+                  >
+                    BIIL{' '}
+                    <span className="logo-word" style={{ margin: '0px' }}>
+                      House.
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </Parallax>
         </div>
-      </Parallax>
-
-      <Parallax translateY={[0, -200]}>
-        <div className="models-pic2">
-          <div className="text-block-2">
-            <p
-              style={{
-                maxWidth: '350px',
-                lineHeight: '40px',
-                margin: '20px',
-                fontWeight: 650,
-                fontSize: '18px',
-              }}
-            >
-              Discover the epitome of urban living at BIIL House. Unravel a
-              lifestyle that exceeds expectations. Welcome home to luxury
-              redefined.
-            </p>
-          </div>
-        </div>
-      </Parallax>
-
-      <Parallax translateY={[-50, -700]}>
-        <div className="models-pic3">
-          <div className="text-block-3">
-            <p
-              style={{
-                maxWidth: '350px',
-                lineHeight: '40px',
-                margin: '20px',
-                fontWeight: 650,
-                fontSize: '18px',
-              }}
-            >
-              Experience unparalleled comfort and style in the heart of the
-              city. Welcome home to{' '}
-              <span
+      ) : (
+        <div>
+          <div className="models-pic">
+            <div className="text-block-1">
+              <h1
                 style={{
                   margin: 0,
+                  fontSize: '40px',
                   fontFamily: '"Crimson Text", serif',
-                  fontSize: '25px',
                 }}
               >
-                BIIL{' '}
-                <span className="logo-word" style={{ margin: '0px' }}>
-                  House.
+                BIIL <p className="logo-word">House.</p>
+              </h1>
+              <p
+                style={{
+                  maxWidth: '350px',
+                  lineHeight: '40px',
+                  margin: '20px',
+                  fontWeight: 650,
+                  fontSize: '18px',
+                }}
+                className="text-block-1-text"
+              >
+                Welcome to BIIL House, where luxury meets convenience. Comfort
+                and style in every corner of your new home.
+              </p>
+            </div>
+          </div>
+          <div className="models-pic2">
+            <div className="text-block-2">
+              <p
+                style={{
+                  maxWidth: '350px',
+                  lineHeight: '40px',
+                  margin: '20px',
+                  fontWeight: 650,
+                  fontSize: '18px',
+                }}
+              >
+                Discover the epitome of urban living at BIIL House. Unravel a
+                lifestyle that exceeds expectations. Welcome home to luxury
+                redefined.
+              </p>
+            </div>
+          </div>
+          <div className="models-pic3">
+            <div className="text-block-3">
+              <p
+                style={{
+                  maxWidth: '350px',
+                  lineHeight: '40px',
+                  margin: '20px',
+                  fontWeight: 650,
+                  fontSize: '18px',
+                }}
+              >
+                Experience unparalleled comfort and style in the heart of the
+                city. Welcome home to{' '}
+                <span
+                  style={{
+                    margin: 0,
+                    fontFamily: '"Crimson Text", serif',
+                    fontSize: '25px',
+                  }}
+                >
+                  BIIL{' '}
+                  <span className="logo-word" style={{ margin: '0px' }}>
+                    House.
+                  </span>
                 </span>
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
-      </Parallax>
+      )}
 
       {/* <ScrollDownButton /> */}
       {/* <img src={Models} alt="Models-Pic" className="models-pic" /> */}
-      <div style={{ marginTop: '-1000px' }}>
+      <div style={{ marginTop: window.innerWidth > 900 ? '-1000px' : '' }}>
         {' '}
         <div
           style={{
