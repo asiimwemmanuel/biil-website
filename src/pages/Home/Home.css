@@ -25,13 +25,31 @@
   align-items: center;
   color: #5a5a5a;
   background-color: gba(70,72,74,0.1) !important; 
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(200%) blur(5px);
+  backdrop-filter: saturate(200%) blur(1px);
+  -webkit-backdrop-filter: saturate(200%) blur(1px);
+}
+
+.text-block-3{
+  height: 100vh;
+  width:45vw;
+  background-color: #ffffffb7;
+  position:absolute;
+  bottom:0;
+  right:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+  background-color: gba(70,72,74,0.1) !important; 
+  backdrop-filter: saturate(200%) blur(1px);
+  -webkit-backdrop-filter: saturate(200%) blur(1px);
 }
 
 .text-block-1-text{
     animation: slideIn 1.5s forwards;
 }
+
 
 @keyframes slideIn {
   from {
@@ -56,9 +74,9 @@
   justify-content: center;
   align-items: center;
   color: #5a5a5a;
-  background-color: gba(70,72,74,0.1) !important; 
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(200%) blur(5px);
+ background-color: gba(70,72,74,0.1) !important; 
+  backdrop-filter: saturate(200%) blur(1px);
+  -webkit-backdrop-filter: saturate(200%) blur(1px);
 }
 
 .models-pic {
@@ -83,6 +101,28 @@
   flex-direction: column;
 }
 
+.models-pic3 {
+  width: 100%;
+  height: 100vh;
+  /* margin-top: 11vh; */
+  /* height:750px; */
+  /* margin-top: 70px; */
+  object-fit: cover;
+  /* The image used */
+  background-image: url(../../assets/apartments-3.jpeg);
+  will-change: transform;
+  /* transform: translateZ(0); */
+  /* Set a specific height */
+  min-height: 90vh; 
+  /* Create the parallax scrolling effect */
+  /* background-attachment:fixed;  */
+  background-position: top center; 
+  background-repeat: no-repeat;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+}
+
 .models-pic2 {
   width: 100%;
   height: 100vh;
@@ -91,7 +131,8 @@
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/apartments-3.webp);
+  background-image: url(../../assets/apartments-2.webp);
+
   will-change: transform;
   /* transform: translateZ(0); */
   /* Set a specific height */
@@ -132,7 +173,14 @@
   .text-block-2{
     width:100vw;
     height:35vh;
-    top:400px;
+    top:410px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+   .text-block-3{
+    width:100vw;
+    height:35vh;
+    top:410px;
     padding-top: 20px;
     padding-bottom: 20px;
   }

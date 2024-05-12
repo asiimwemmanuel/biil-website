@@ -12,6 +12,7 @@ import ContextProvider from './Context/ContextProvider.jsx';
 import Orders from './pages/Orders/Orders.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
 import Coupons from './pages/Coupons/Coupons.jsx';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ContextProvider>
-      <RouterProvider router={router} />
+      <ParallaxProvider>
+        <RouterProvider router={router} />
+      </ParallaxProvider>
     </ContextProvider>
   </React.StrictMode>
 );

@@ -87,20 +87,28 @@ function Header() {
     let scrollPosition = window.scrollY;
 
     // Adjust this value to determine when to trigger the color change
-    let triggerHeight = 580;
+    let triggerHeight = 306;
     console.log(scrollPosition);
 
-    if (scrollPosition > triggerHeight && scrollPosition < 1270) {
+    let viewportWidth = window.innerWidth;
+
+    if (
+      scrollPosition > triggerHeight &&
+      scrollPosition < 514 &&
+      viewportWidth > 900
+    ) {
       logo.style.color = '#5a5a5a';
       contactBtn.style.color = '#ffffff';
       contactBtn.style.borderColor = '#ffffff';
       NavLink[0].style.color = '#ffffff';
       NavLink[1].style.color = '#ffffff';
-    } else if (scrollPosition > 1270) {
+    } else if (scrollPosition > 514 && viewportWidth > 900) {
       // Reset the color if the scroll position is below the trigger height
-      logo.style.color = '#ffffff'; // This will revert to the default color defined in your CSS
-      NavLink[0].style.color = '#ffffff';
-      NavLink[1].style.color = '#ffffff';
+      contactBtn.style.color = '#5a5a5a';
+      contactBtn.style.borderColor = '#5a5a5a';
+      NavLink[0].style.color = '#5a5a5a';
+      NavLink[1].style.color = '#5a5a5a';
+      logo.style.color = '#ffffff';
       // NavLink[0].style.color = '#5a5a5a';
       // NavLink[1].style.color = '#5a5a5a';
     } else {
