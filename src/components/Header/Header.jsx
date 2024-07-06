@@ -80,45 +80,45 @@ function Header() {
     return { totalQuantity, totalCost };
   };
 
-  window.addEventListener('scroll', function () {
-    let logo = document.querySelector('.logo');
-    let NavLink = document.querySelectorAll('.NavLink');
-    let contactBtn = document.querySelector('.contact-btn');
-    let scrollPosition = window.scrollY;
+  // window.addEventListener('scroll', function () {
+  //   let logo = document.querySelector('.logo');
+  //   let NavLink = document.querySelectorAll('.NavLink');
+  //   let contactBtn = document.querySelector('.contact-btn');
+  //   let scrollPosition = window.scrollY;
 
-    // Adjust this value to determine when to trigger the color change
-    let triggerHeight = 306;
-    console.log(scrollPosition);
+  //   // Adjust this value to determine when to trigger the color change
+  //   let triggerHeight = 306;
+  //   console.log(scrollPosition);
 
-    let viewportWidth = window.innerWidth;
+  //   let viewportWidth = window.innerWidth;
 
-    if (
-      scrollPosition > triggerHeight &&
-      scrollPosition < 514 &&
-      viewportWidth > 900
-    ) {
-      logo.style.color = '#5a5a5a';
-      contactBtn.style.color = '#ffffff';
-      contactBtn.style.borderColor = '#ffffff';
-      NavLink[0].style.color = '#ffffff';
-      NavLink[1].style.color = '#ffffff';
-    } else if (scrollPosition > 514 && viewportWidth > 900) {
-      // Reset the color if the scroll position is below the trigger height
-      contactBtn.style.color = '#5a5a5a';
-      contactBtn.style.borderColor = '#5a5a5a';
-      NavLink[0].style.color = '#5a5a5a';
-      NavLink[1].style.color = '#5a5a5a';
-      logo.style.color = '#ffffff';
-      // NavLink[0].style.color = '#5a5a5a';
-      // NavLink[1].style.color = '#5a5a5a';
-    } else {
-      contactBtn.style.color = '#5a5a5a';
-      contactBtn.style.borderColor = '#5a5a5a';
-      NavLink[0].style.color = '#5a5a5a';
-      NavLink[1].style.color = '#5a5a5a';
-      logo.style.color = '#ffffff';
-    }
-  });
+  //   if (
+  //     scrollPosition > triggerHeight &&
+  //     scrollPosition < 514 &&
+  //     viewportWidth > 900
+  //   ) {
+  //     logo.style.color = '#5a5a5a';
+  //     contactBtn.style.color = '#ffffff';
+  //     contactBtn.style.borderColor = '#ffffff';
+  //     NavLink[0].style.color = '#ffffff';
+  //     NavLink[1].style.color = '#ffffff';
+  //   } else if (scrollPosition > 514 && viewportWidth > 900) {
+  //     // Reset the color if the scroll position is below the trigger height
+  //     contactBtn.style.color = '#5a5a5a';
+  //     contactBtn.style.borderColor = '#5a5a5a';
+  //     NavLink[0].style.color = '#5a5a5a';
+  //     NavLink[1].style.color = '#5a5a5a';
+  //     logo.style.color = '#ffffff';
+  //     // NavLink[0].style.color = '#5a5a5a';
+  //     // NavLink[1].style.color = '#5a5a5a';
+  //   } else {
+  //     contactBtn.style.color = '#5a5a5a';
+  //     contactBtn.style.borderColor = '#5a5a5a';
+  //     NavLink[0].style.color = '#5a5a5a';
+  //     NavLink[1].style.color = '#5a5a5a';
+  //     logo.style.color = '#ffffff';
+  //   }
+  // });
 
   return (
     <div className="header">
@@ -126,20 +126,9 @@ function Header() {
       {ctx.isDrop ? <DropDown /> : ''}
       {ctx.modal ? <Cart /> : ''}
       {ctx.contactCard ? <Modal /> : ''}
-      <div style={{ display: 'flex' }}>
-        {' '}
-        <FiMenu
-          className="Menu-icon"
-          onClick={() => {
-            ctx.setIsDropVal(true);
-          }}
-        />
-      </div>
       <div className="logo-container">
         <Link to="/" className="logo">
-          <h1 style={{ margin: 0, fontSize: '40px' }}>
-            BIIL <p className="logo-word">House.</p>
-          </h1>
+          <h1 style={{ margin: 0, fontSize: '45px' }}>BIIL</h1>
         </Link>
       </div>
       <div className="central-header-div">
@@ -205,7 +194,21 @@ function Header() {
         >
           Contact Us
         </button>
-        <div className="icon-container" style={{ marginRight: '5px' }}>
+        <div
+          style={{
+            display: 'flex',
+            marginRight: '-60px',
+          }}
+        >
+          {' '}
+          <FiMenu
+            className="Menu-icon"
+            onClick={() => {
+              ctx.setIsDropVal(true);
+            }}
+          />
+        </div>
+        {/* <div className="icon-container" style={{ marginRight: '5px' }}>
           <FaShoppingBag
             className="icon"
             onClick={() => {
@@ -224,7 +227,7 @@ function Header() {
               : 0}
           </div>
           <div className="hover-ring"></div>
-        </div>
+        </div> */}
         {/* <div className="icon-container">
           <FaUser className="icon" />
           <div className="hover-ring"></div>

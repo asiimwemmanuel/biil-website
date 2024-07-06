@@ -10,7 +10,7 @@
   height:70px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  padding:25px;
+  padding:8px;
 }
 
 .backdrop{
@@ -19,22 +19,25 @@
   width: 100%;
   height:70px;
   z-index: -5;
-  padding:25px;
+  padding:20px;
   background-color: gba(70,72,74,0.1) !important; 
   backdrop-filter: saturate(120%) blur(5px);
   -webkit-backdrop-filter: saturate(120%) blur(5px);
 }
 
-.logo{
-  font-family: "Crimson Text", serif;
+@font-face {
+    font-family: 'Volterra-Regular';
+    src: url(../../assets/fonts/Volterra-Regular.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.logo-word{
-font-family: "Dancing Script", cursive;
-  font-style: italic;
-  margin: 0;
-  margin-left: 20px;
-  margin-top: -10px;
+
+.logo{
+    font-family: 'Volterra-Regular' !important;
+    text-decoration: none !important;
+    color: #ffffff !important
+
 }
 
 .Menu-icon{
@@ -80,7 +83,7 @@ font-family: "Dancing Script", cursive;
 }
 
 .NavLink {
-  color: #303030;
+  color: #ffffff;
   text-decoration: none;
   margin-right: 15px;
   cursor: pointer;
@@ -159,7 +162,7 @@ font-family: "Dancing Script", cursive;
 }
 
 .NavLink {
-  color: #5a5a5a;
+   color: #ffffff;
   text-decoration: none;
   margin-right: 15px;
   position: relative;
@@ -172,7 +175,7 @@ font-family: "Dancing Script", cursive;
   bottom: -2px; /* Adjust the position of the underline */
   height: 2px;
   width: 0;
-  background-color: #5a5a5a;
+  background-color: #ffffff;
   transition: width 0.3s; /* Add transition effect for the underline width */
 }
 
@@ -352,7 +355,7 @@ font-family: "Dancing Script", cursive;
 }
 
 .contact-btn{
-  color: #5a5a5a;
+  color: #ffffff;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;

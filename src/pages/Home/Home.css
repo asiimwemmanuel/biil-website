@@ -8,97 +8,110 @@
     flex-direction: row;
     align-items: center;
     /* padding: 5px; */
-    margin-top: -40px;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+    /* flex-wrap: wrap; */
 }
 
-.text-block-1{
-  height: 100vh;
-  width:45vw;
-  background-color: #ffffffb7;
-  position:absolute;
-  bottom:0;
-  right:0;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #5a5a5a;
-  background-color: gba(70,72,74,0.1) !important; 
-  backdrop-filter: saturate(200%) blur(1px);
-  -webkit-backdrop-filter: saturate(200%) blur(1px);
-}
-
-.text-block-3{
-  height: 100vh;
-  width:45vw;
-  background-color: #ffffffb7;
-  position:absolute;
-  bottom:0;
-  right:0;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #5a5a5a;
-  background-color: gba(70,72,74,0.1) !important; 
-  backdrop-filter: saturate(200%) blur(1px);
-  -webkit-backdrop-filter: saturate(200%) blur(1px);
-}
-
-.text-block-1-text{
-    animation: slideIn 1.5s forwards;
-}
-
-
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-.text-block-2{
-  height: 100%;
-  width:55vw;
-  background-color: #ffffffd2;
-  position:relative;
-  left:0;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #5a5a5a;
- background-color: gba(70,72,74,0.1) !important; 
-  backdrop-filter: saturate(200%) blur(1px);
-  -webkit-backdrop-filter: saturate(200%) blur(1px);
-}
-
-.models-pic {
-  width: 100%;
-  height: 100vh;
-  /* margin-top: 11vh; */
-  /* height:750px; */
-  /* margin-top: 70px; */
-  object-fit: cover;
-  /* The image used */
-  background-image: url(../../assets/apartments-2.jpeg);
-  will-change: transform;
-  /* transform: translateZ(0); */
-  /* Set a specific height */
-  min-height: 90vh; 
-  /* Create the parallax scrolling effect */
-  /* background-attachment:fixed;  */
-  background-position: top center; 
+.carousel-pic{
+  width: 100vw;
+  height: 480px;
+  background-image: url(../../assets/HomePage_Gigantico.jpeg);
+  background-position: center center; 
   background-repeat: no-repeat;
-  background-size:cover;
-  display:flex;
+  background-size: cover;
+  display: flex;
   flex-direction: column;
+  position: relative; /* Added to position FillBox absolutely within it */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-pic2{
+  width: 100vw;
+  height: 480px;
+  background-image: url(../../assets/Carousel-img-2.jpeg);
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Added to position FillBox absolutely within it */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-pic3{
+  width: 100vw;
+  height: 480px;
+  background-image: url(../../assets/Carousel-img-3.jpeg);
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Added to position FillBox absolutely within it */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-pic4{
+  width: 100vw;
+  height: 480px;
+  background-image: url(../../assets/Carousel-img-4.jpeg);
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Added to position FillBox absolutely within it */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.fill-box {
+  position: absolute;
+  top:380px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 104vw; /* Adjust this value as needed to make it wider than the viewport */
+  height: 104px; /* Adjust height as needed */
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.fill-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Make sure the image is at the lowest z-index */
+}
+.explore{
+  text-align: center;
+  color:#000000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.fill-box-text {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the image */
+  text-align: center;
+  font-size: 30px; /* Adjust font size as needed */
+  color: #C0C0C0; /* Adjust text color as needed */
+  font-family: 'Volterra-Regular';
+  background: linear-gradient(to bottom, #ffffff, #e8e8e8, #5a5a5a) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
 }
 
 .models-pic3 {
@@ -109,7 +122,7 @@
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/apartments-3.jpeg);
+  background-image: url(../../assets/apartments-3.jpg);
   will-change: transform;
   /* transform: translateZ(0); */
   /* Set a specific height */
@@ -131,8 +144,7 @@
   /* margin-top: 70px; */
   object-fit: cover;
   /* The image used */
-  background-image: url(../../assets/apartments-2.webp);
-
+    background-image: url(../../assets/apartments-2.jpg);
   will-change: transform;
   /* transform: translateZ(0); */
   /* Set a specific height */
@@ -186,3 +198,24 @@
   }
 }
 
+/* CarouselCustom.css */
+
+/* Style for the previous control */
+.carousel-control-prev-icon {
+  background-size:cover;
+  width: 40px;
+  height: 40px;
+}
+
+/* Style for the next control */
+.carousel-control-next-icon {
+background-size:cover;
+  width: 40px;
+  height: 40px;
+}
+
+/* Additional styling
+.carousel-control-prev,
+.carousel-control-next {
+  filter: brightness(0) invert(1); For white icons on dark backgrounds
+} */
