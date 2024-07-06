@@ -185,7 +185,16 @@ function Header() {
           </div>
         </div> */}
       </div>
-      <div className="icons-container">
+      <div
+        className="icons-container"
+        style={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          alignItems: 'center',
+          paddingRight: '10px',
+          // marginRight: '-80px',
+        }}
+      >
         <button
           className="contact-btn"
           onClick={() => {
@@ -197,10 +206,8 @@ function Header() {
         <div
           style={{
             display: 'flex',
-            marginRight: '-60px',
           }}
         >
-          {' '}
           <FiMenu
             className="Menu-icon"
             onClick={() => {

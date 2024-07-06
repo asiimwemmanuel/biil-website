@@ -3,11 +3,14 @@ import './Home.css';
 import Header from '../../components/Header/Header';
 import Card from '../../components/Card/Card';
 import CardImg1 from '../../assets/card-img1.jpeg';
+import CardImg2 from '../../assets/card-img2.jpeg';
+import CardImg3 from '../../assets/card-img3.jpeg';
 import Pic3 from '/src/assets/image3.png';
 import Pic2 from '/src/assets/image2.png';
 import Footer from '../../components/Footer/footer';
 import FillBox from '../../assets/Fill-Box.png';
 import Carousel from 'react-bootstrap/Carousel';
+import Map from '../../components/Map/Map.jsx';
 // import { Parallax } from 'react-scroll-parallax';
 // import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -110,7 +113,7 @@ function Home() {
         <h1
           className="fill-box-text"
           style={{
-            marginTop: '-80px',
+            marginTop: '-75px',
             fontSize: '130px',
             // backgroundColor: 'blue',
             padding: '0px',
@@ -120,12 +123,34 @@ function Home() {
         </h1>
       </div>
       <h2 className="explore">Explore our locations</h2>
-      <Card
-        title="Kitetika bungalows"
-        price={500000}
-        image={CardImg1}
-        description="3 bedroom Apartments and Office Rental Space Available"
-      />
+      <div className="cardDiv">
+        <Card
+          title="Kitetika bungalows"
+          price={500000}
+          image={CardImg1}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Janda bungalows"
+          price={800000}
+          image={CardImg2}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Bulenga flats"
+          price={800000}
+          image={CardImg3}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+      </div>
+      <div className="map-container">
+        <h1 style={{ color: 'black', fontFamily: 'Volterra-Regular' }}>BIIL</h1>
+        <p style={{ color: '#000000' }}>
+          Get directions to our <br />
+          locations using the map
+        </p>
+        <Map />
+      </div>
       {/* <Footer /> */}
     </div>
   );

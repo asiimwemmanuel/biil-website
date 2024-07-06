@@ -17,7 +17,7 @@ function Card(props) {
   return (
     <div className="cardd">
       <img className="card-img" src={props.image} alt={props.image} />
-      <BsBuildingsFill style={{ height: '30px', width: '30px' }} />
+      <BsBuildingsFill style={{ height: '25px', width: '25px' }} />
       <div
         style={{
           paddingLeft: '10px',
@@ -29,14 +29,21 @@ function Card(props) {
         }}
       >
         <h4
-          style={{ color: '#000000', marginBottom: '5px', marginLeft: '20px' }}
+          style={{
+            color: '#000000',
+            margin: '5px',
+            fontSize: '19px',
+          }}
         >
           {props.title}
         </h4>
         <p style={{ textAlign: 'center' }}>{`${props.price.toLocaleString(
           'en-US'
         )} UGX / month`}</p>
-        <p style={{ textAlign: 'center' }}>{props.description}</p>
+
+        <p style={{ textAlign: 'center' }} className="card-description">
+          {props.description}
+        </p>
       </div>
     </div>
   );

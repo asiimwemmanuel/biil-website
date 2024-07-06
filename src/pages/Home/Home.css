@@ -2,19 +2,29 @@
   background-image: url(../../assets/Models.png);
 } */
 
-.cardDiv{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    /* padding: 5px; */
-    overflow-x: scroll;
-    /* flex-wrap: wrap; */
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+
+.cardDiv {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
 }
 
 .carousel-pic{
   width: 100vw;
-  height: 480px;
+  height:500px;
   background-image: url(../../assets/HomePage_Gigantico.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
@@ -29,7 +39,7 @@
 
 .carousel-pic2{
   width: 100vw;
-  height: 480px;
+  height: 500px;
   background-image: url(../../assets/Carousel-img-2.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
@@ -44,7 +54,7 @@
 
 .carousel-pic3{
   width: 100vw;
-  height: 480px;
+  height: 500px;
   background-image: url(../../assets/Carousel-img-3.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
@@ -59,7 +69,7 @@
 
 .carousel-pic4{
   width: 100vw;
-  height: 480px;
+  height: 500px;
   background-image: url(../../assets/Carousel-img-4.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
@@ -75,7 +85,7 @@
 
 .fill-box {
   position: absolute;
-  top:380px;
+  top:400px;
   left: 50%;
   transform: translateX(-50%);
   width: 104vw; /* Adjust this value as needed to make it wider than the viewport */
@@ -114,64 +124,6 @@
   color: transparent !important;
 }
 
-.models-pic3 {
-  width: 100%;
-  height: 100vh;
-  /* margin-top: 11vh; */
-  /* height:750px; */
-  /* margin-top: 70px; */
-  object-fit: cover;
-  /* The image used */
-  background-image: url(../../assets/apartments-3.jpg);
-  will-change: transform;
-  /* transform: translateZ(0); */
-  /* Set a specific height */
-  min-height: 90vh; 
-  /* Create the parallax scrolling effect */
-  /* background-attachment:fixed;  */
-  background-position: top center; 
-  background-repeat: no-repeat;
-  background-size:cover;
-  display:flex;
-  flex-direction: column;
-}
-
-.models-pic2 {
-  width: 100%;
-  height: 100vh;
-  /* margin-top: 11vh; */
-  /* height:750px; */
-  /* margin-top: 70px; */
-  object-fit: cover;
-  /* The image used */
-    background-image: url(../../assets/apartments-2.jpg);
-  will-change: transform;
-  /* transform: translateZ(0); */
-  /* Set a specific height */
-  min-height: 90vh; 
-  /* Create the parallax scrolling effect */
-  /* background-attachment:fixed;  */
-  background-position: top center; 
-  background-repeat: no-repeat;
-  background-size:cover;
-  display:flex;
-  flex-direction: column;
-}
-
-
-/* @media screen and (max-width:1000px){
-  .cardDiv{
-    flex-direction: column;
-  }
-} */
-/* 
-@media screen and (max-width:660px){
-  .models-pic{
-    background-image: url(../../assets/Models-pic-phone.jpeg);
-  background-position: top left; 
-
-  }
-} */
 
 
 @media screen and (max-width:900px){
