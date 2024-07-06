@@ -55,7 +55,9 @@ function Footer() {
         </p>
       </div>
 
-      <h3 style={{ fontSize: '18px' }}>&copy; BIIL House {year}</h3>
+      <h3 style={{ fontSize: '18px', fontFamily: 'Georgia' }}>
+        &copy; BIIL House {year}
+      </h3>
     </footer>
   );
 }
