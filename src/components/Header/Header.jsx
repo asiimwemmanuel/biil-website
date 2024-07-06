@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Header.css';
 import { NavLink, Link } from 'react-router-dom';
-import Logo from '/src/assets/Logo.svg';
 import Context from '../../Context/Context';
 import DropDown from '../Drop-Down/DropDown';
 import { FiMenu } from 'react-icons/fi';
-import { FaShoppingBag } from 'react-icons/fa';
-import { CiSearch } from 'react-icons/ci';
 import Hope from '/src/assets/hope.jpg';
 import Reckless from '/src/assets/Reckless.png';
 import Overthinker from '/src/assets/DOTI.jpeg';
