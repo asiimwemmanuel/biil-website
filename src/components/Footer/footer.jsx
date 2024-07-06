@@ -5,95 +5,57 @@ import { FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { MdOutlineEmail } from 'react-icons/md';
 import { PiYoutubeLogoLight } from 'react-icons/pi';
+import FillBox from '../../assets/Fill-Box.png';
 
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h1 className="footer-heading">&copy; Conspiracy UG</h1>
-        <p className="footer-text">Uncover the truth, wear Conspiracy</p>
-      </div>
-      <div className="social-links">
         <div
           style={{
-            justifyContent: 'center',
-            alignItems: 'center',
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            marginTop: '15px',
+            marginLeft: '15px',
+            marginRight: '15px',
           }}
-          className="footer-social-div"
         >
-          <Link
-            to="https://www.instagram.com/conspiracyug/"
-            className="social-link"
-            id="social-link1"
-            target="_blank"
+          <h1
             style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'flex',
-              flexDirection: 'column',
+              fontFamily: 'Volterra-Regular',
+              fontSize: '35px',
+              color: '#ffffff',
+              width: '40%',
+              textAlign: 'left',
             }}
           >
-            <FaInstagram style={{ height: '35px', width: '35px' }} />
-            <i className="fab fa-instagram"></i> Instagram
-          </Link>
-        </div>
+            BIIL
+          </h1>
 
-        <div
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-          className="footer-social-div"
-        >
-          {/* <Link
-            to="https://youtube.com/conspiracy"
-            target="_blank"
-            className="social-link"
-            id="social-link2"
+          <h1
             style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'flex',
-              flexDirection: 'column',
+              fontSize: '35px',
+              color: '#ffffff',
+              width: '60%',
+              textAlign: 'right',
             }}
+            className="footer-about-us"
           >
-            <PiYoutubeLogoLight style={{ height: '40px', width: '40px' }} />
-            <i className="fab fa-youtube"></i> YouTube
-          </Link> */}
+            About Us
+          </h1>
         </div>
-        <div
-          style={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-          className="footer-social-div"
-        >
-          <a
-            href="mailto:conspiracy.uganda@gmail.com"
-            className="social-link"
-            id="social-link3"
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
-            <MdOutlineEmail style={{ height: '40px', width: '40px' }} />
-            <i className="fas fa-envelope"></i> Email us
-          </a>
-        </div>
+        <p className="footer-text">
+          Biil is a property firm specializing in the hospitality industry. The
+          firm manages a diverse portfolio of properties, including apartment
+          flats and joint bungalows. This project was developed as a paid
+          commission.
+        </p>
       </div>
-      <h3 style={{ fontSize: '18px' }}>
-        &copy; {year} Conspiracy UG. All rights reserved
-      </h3>
+
+      <h3 style={{ fontSize: '18px' }}>&copy; BIIL House {year}</h3>
     </footer>
   );
 }

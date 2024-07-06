@@ -22,7 +22,7 @@
   padding:20px;
   background-color: gba(70,72,74,0.1) !important; 
   backdrop-filter: saturate(120%) blur(5px);
-  -webkit-backdrop-filter: saturate(120%) blur(5px);
+  -webkit-backdrop-filter: saturate(120%) blur(2px);
 }
 
 @font-face {
@@ -33,10 +33,24 @@
 }
 
 
-.logo{
+.logo1{
     font-family: 'Volterra-Regular' !important;
     text-decoration: none !important;
     color: #ffffff !important
+/* background: linear-gradient(to bottom, #ffffff, #ffffff, #5a5a5a) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important; */
+}
+
+.logo2{
+    font-family: 'Volterra-Regular' !important;
+    text-decoration: none !important;
+    color: #000000 !important
+     /* background: linear-gradient(to bottom, #ffffff, #e8e8e8, #5a5a5a) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important; */
 
 }
 

@@ -5,9 +5,15 @@ import Card from '../../components/Card/Card';
 import CardImg1 from '../../assets/card-img1.jpeg';
 import CardImg2 from '../../assets/card-img2.jpeg';
 import CardImg3 from '../../assets/card-img3.jpeg';
+import CardImg4 from '../../assets/card-img4.jpeg';
+import CardImg5 from '../../assets/card-img5.jpeg';
+import CardImg6 from '../../assets/card-img6.jpeg';
+import CardImg7 from '../../assets/card-img7.jpeg';
+import CardImg8 from '../../assets/card-img8.jpeg';
+import CardImg9 from '../../assets/card-img9.jpeg';
 // import Pic3 from '/src/assets/image3.png';
 // import Pic2 from '/src/assets/image2.png';
-// import Footer from '../../components/Footer/footer';
+import Footer from '../../components/Footer/footer';
 import FillBox from '../../assets/Fill-Box.png';
 import Carousel from 'react-bootstrap/Carousel';
 import Map from '../../components/Map/Map.jsx';
@@ -138,20 +144,66 @@ function Home() {
         />
         <Card
           title="Bulenga flats"
-          price={800000}
+          price={500000}
           image={CardImg3}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Mbalwa Bungalows"
+          price={600000}
+          image={CardImg4}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Zanna Bungalows"
+          price={700000}
+          image={CardImg5}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Nnajanamkumbi Bungalow"
+          price={1000000}
+          image={CardImg6}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Kabowa Bungalow"
+          price={1500000}
+          image={CardImg7}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+        <Card
+          title="Kyebando"
+          price={300000}
+          image={CardImg8}
+          description="3 bedroom Apartments and Office Rental Space Available"
+        />
+
+        <Card
+          title="Kyebando"
+          price={1200000}
+          image={CardImg9}
           description="3 bedroom Apartments and Office Rental Space Available"
         />
       </div>
       <div className="map-container">
-        <h1 style={{ color: 'black', fontFamily: 'Volterra-Regular' }}>BIIL</h1>
+        <h1
+          style={{
+            color: 'black',
+            fontFamily: 'Volterra-Regular',
+            fontSize: '35px',
+            marginTop: '30px',
+          }}
+        >
+          BIIL
+        </h1>
         <p style={{ color: '#000000' }}>
           Get directions to our <br />
           locations using the map
         </p>
         <Map />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -13,109 +13,20 @@ import Modal from '../Modal/Modal.jsx';
 
 function Header() {
   const ctx = useContext(Context);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [products, setProducts] = useState([
-    {
-      id: 1,
-      title: 'Hope',
-      image: Hope,
-      para: "Hope. A delicate thread in life's tapestry. Weaving dreams into reality with timeless grace.",
-      price: 38000,
-    },
-    {
-      id: 3,
-      title: 'Reckless',
-      image: Reckless,
-      para: 'Rock the edge! Our fashion screams rebellion. Break the mold, flaunt your style.',
-      price: 38000,
-    },
-    {
-      id: 2,
-      title: 'Overthinker',
-      image: Overthinker,
-      para: 'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.',
-      price: 38000,
-    },
-
-    // Add more product objects here...
-  ]);
-  // useEffect(() => {
-  //   if (!localStorage.getItem('CartItems')) {
-  //     localStorage.getItem('CartItems', '[]');
-  //   }
-  // }, []);
-
-  const cartItems = JSON.parse(
-    localStorage.getItem('CartItems') ? localStorage.getItem('CartItems') : '[]'
-  );
-
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollThreshold = 460; // Change this to whatever scroll level you want
 
   useEffect(() => {
-    if (searchTerm === '') {
-      setFilteredProducts([]);
-      return;
-    }
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
 
-    const filteredResults = products.filter((product) =>
-      product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredProducts(filteredResults);
-  }, [searchTerm, products]);
+    window.addEventListener('scroll', handleScroll);
 
-  const computeCost = (array) => {
-    let totalQuantity = 0;
-    let totalCost = 0;
-    array.forEach((item) => {
-      totalQuantity += Number(item.quantity);
-      totalCost += item.price * item.quantity;
-    });
-    return { totalQuantity, totalCost };
-  };
-
-  // window.addEventListener('scroll', function () {
-  //   let logo = document.querySelector('.logo');
-  //   let NavLink = document.querySelectorAll('.NavLink');
-  //   let contactBtn = document.querySelector('.contact-btn');
-  //   let scrollPosition = window.scrollY;
-
-  //   // Adjust this value to determine when to trigger the color change
-  //   let triggerHeight = 306;
-  //   console.log(scrollPosition);
-
-  //   let viewportWidth = window.innerWidth;
-
-  //   if (
-  //     scrollPosition > triggerHeight &&
-  //     scrollPosition < 514 &&
-  //     viewportWidth > 900
-  //   ) {
-  //     logo.style.color = '#5a5a5a';
-  //     contactBtn.style.color = '#ffffff';
-  //     contactBtn.style.borderColor = '#ffffff';
-  //     NavLink[0].style.color = '#ffffff';
-  //     NavLink[1].style.color = '#ffffff';
-  //   } else if (scrollPosition > 514 && viewportWidth > 900) {
-  //     // Reset the color if the scroll position is below the trigger height
-  //     contactBtn.style.color = '#5a5a5a';
-  //     contactBtn.style.borderColor = '#5a5a5a';
-  //     NavLink[0].style.color = '#5a5a5a';
-  //     NavLink[1].style.color = '#5a5a5a';
-  //     logo.style.color = '#ffffff';
-  //     // NavLink[0].style.color = '#5a5a5a';
-  //     // NavLink[1].style.color = '#5a5a5a';
-  //   } else {
-  //     contactBtn.style.color = '#5a5a5a';
-  //     contactBtn.style.borderColor = '#5a5a5a';
-  //     NavLink[0].style.color = '#5a5a5a';
-  //     NavLink[1].style.color = '#5a5a5a';
-  //     logo.style.color = '#ffffff';
-  //   }
-  // });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="header">
@@ -124,8 +35,18 @@ function Header() {
       {ctx.modal ? <Cart /> : ''}
       {ctx.contactCard ? <Modal /> : ''}
       <div className="logo-container">
-        <Link to="/" className="logo">
-          <h1 style={{ margin: 0, fontSize: '45px' }}>BIIL</h1>
+        <Link
+          to="/"
+          className={scrollPosition > scrollThreshold ? 'logo2' : 'logo1'}
+        >
+          <h1
+            style={{
+              margin: 0,
+              fontSize: '50px',
+            }}
+          >
+            BIIL
+          </h1>
         </Link>
       </div>
       <div className="central-header-div">
@@ -209,6 +130,9 @@ function Header() {
             className="Menu-icon"
             onClick={() => {
               ctx.setIsDropVal(true);
+            }}
+            style={{
+              color: scrollPosition > scrollThreshold ? '#000000' : '#ffffff',
             }}
           />
         </div>
