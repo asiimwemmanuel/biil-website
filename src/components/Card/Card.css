@@ -23,6 +23,7 @@
   color: #777;
   word-wrap: break-word; /* Ensure long words break properly */
   white-space: normal; /* Allow text to wrap to the next line */
+ 
 }
 
 

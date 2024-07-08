@@ -51,7 +51,7 @@ function DropDown(props) {
         <NavLink
           to="/about"
           style={{
-            marginTop: '10px',
+            marginTop: '35px',
             marginLeft: '0px',
             marginRight: '0px',
             display: 'flex',
@@ -68,7 +68,6 @@ function DropDown(props) {
             style={{
               height: '25px',
               width: '25px',
-              marginTop: '30px',
               marginBottom: '5px',
             }}
           />
