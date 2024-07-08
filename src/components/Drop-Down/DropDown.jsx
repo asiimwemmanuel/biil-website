@@ -4,6 +4,10 @@ import { NavLink } from 'react-router-dom';
 import Context from '../../Context/Context.jsx';
 import { FaShoppingBag } from 'react-icons/fa';
 import { IoIosContact } from 'react-icons/io';
+import ContactUs from '../ContactUs/ContactUs.jsx';
+import { IoMdHome } from 'react-icons/io';
+import { FaCircleInfo } from 'react-icons/fa6';
+import { IoMdContact } from 'react-icons/io';
 
 function DropDown(props) {
   const ctx = useContext(Context);
@@ -18,85 +22,93 @@ function DropDown(props) {
         }}
       ></div>
       <div className="dropdown">
-        <h2
-          style={{ marginLeft: '10px', fontSize: '26px' }}
-          className="footer-heading"
-        >
-          Conspiracy UG
-        </h2>
-        <p
-          style={{ maxWidth: '150px', textAlign: 'center', marginTop: '-10px' }}
-        >
-          Uncover the truth wear Conspiracy
-        </p>
         <NavLink
           to="/"
-          style={{ marginTop: '40px' }}
+          style={{
+            marginTop: '10px',
+            marginLeft: '0px',
+            marginRight: '0px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
           className="NavLinkDropDown"
           onClick={() => {
             ctx.setIsDropVal(false);
           }}
         >
+          <IoMdHome
+            style={{
+              height: '28px',
+              width: '28px',
+              margin: 0,
+              marginBottom: '5px',
+            }}
+          />
           Home
         </NavLink>
-        {/* <NavLink
+        <NavLink
           to="/about"
-          style={{ marginTop: '15px' }}
+          style={{
+            marginTop: '10px',
+            marginLeft: '0px',
+            marginRight: '0px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
           className="NavLinkDropDown"
           onClick={() => {
             ctx.setIsDropVal(false);
           }}
         >
+          <FaCircleInfo
+            style={{
+              height: '25px',
+              width: '25px',
+              marginTop: '30px',
+              marginBottom: '5px',
+            }}
+          />
           About
-        </NavLink> */}
-        {/* <button
+        </NavLink>
+
+        <h1
           style={{
             color: 'white',
-            border: '1px solid white',
-            marginTop: '20px',
-          }}
-        >
-          Login
-        </button> */}
-        <button
-          style={{
-            color: 'white',
-            border: '1px solid white',
-            marginTop: '20px',
-            textAlign: 'center',
-            width: '129px',
-          }}
-          onClick={() => {
-            ctx.setIsDropVal(false);
-            ctx.setModalVal(true);
-          }}
-        >
-          <FaShoppingBag /> Cart
-        </button>
-        <button
-          style={{
-            color: 'white',
-            border: '1px solid white',
-            marginTop: '20px',
+            marginTop: '40px',
             textAlign: 'center',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            cursor: 'pointer',
+            marginLeft: '0px',
+            marginRight: '0px',
+            flexDirection: 'column',
           }}
+          className="NavLinkDropDown"
           onClick={() => {
-            ctx.setIsDropVal(false);
             ctx.setContactCard(true);
+            ctx.setIsDropVal(false);
           }}
         >
-          <IoIosContact
-            style={{ height: '25px', width: '25px', marginRight: '5px' }}
-          />{' '}
+          <IoMdContact
+            style={{
+              height: '25px',
+              width: '25px',
+              marginBottom: '5px',
+            }}
+          />
           Contact Us
-        </button>
-        <h4 style={{ position: 'absolute', bottom: 0, textAlign: 'center' }}>
-          &copy; {year} Conspiracy UG. <br />
-          All rights reserved
-        </h4>
+        </h1>
+        {/* <h5
+          style={{ position: 'absolute', bottom: '10px', textAlign: 'center' }}
+          className="dropdown-copyright-text"
+        >
+          &copy; BIIL House {year}
+        </h5> */}
       </div>
     </div>
   );

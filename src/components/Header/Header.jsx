@@ -7,9 +7,8 @@ import { FiMenu } from 'react-icons/fi';
 import Hope from '/src/assets/hope.jpg';
 import Reckless from '/src/assets/Reckless.png';
 import Overthinker from '/src/assets/DOTI.jpeg';
-
 import Cart from '../Cart/Cart.jsx';
-import Modal from '../Modal/Modal.jsx';
+import ContactUs from '../ContactUs/ContactUs.jsx';
 
 function Header() {
   const ctx = useContext(Context);
@@ -33,7 +32,7 @@ function Header() {
       <div className="backdrop"></div>
       {ctx.isDrop ? <DropDown /> : ''}
       {ctx.modal ? <Cart /> : ''}
-      {ctx.contactCard ? <Modal /> : ''}
+      {ctx.contactCard ? <ContactUs /> : ''}
       <div className="logo-container">
         <Link
           to="/"
@@ -136,39 +135,6 @@ function Header() {
             }}
           />
         </div>
-        {/* <div className="icon-container" style={{ marginRight: '5px' }}>
-          <FaShoppingBag
-            className="icon"
-            onClick={() => {
-              ctx.setModalVal(true);
-            }}
-            title="Shopping Cart"
-          />
-          <div
-            className={ctx.animateCart ? 'notification-active' : 'notification'}
-            style={{
-              display: cartItems.length == 0 ? 'none' : 'flex',
-            }}
-          >
-            {cartItems
-              ? computeCost(cartItems).totalQuantity.toLocaleString('en-US')
-              : 0}
-          </div>
-          <div className="hover-ring"></div>
-        </div> */}
-        {/* <div className="icon-container">
-          <FaUser className="icon" />
-          <div className="hover-ring"></div>
-        </div> */}
-        {/* <button
-          style={{
-            color: 'white',
-            border: '1px solid white',
-            marginLeft: '20px',
-          }}
-        >
-          Login
-        </button> */}
       </div>
     </div>
   );

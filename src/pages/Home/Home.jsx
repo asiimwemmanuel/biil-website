@@ -17,6 +17,8 @@ import Footer from '../../components/Footer/footer';
 import FillBox from '../../assets/Fill-Box.png';
 import Carousel from 'react-bootstrap/Carousel';
 import Map from '../../components/Map/Map.jsx';
+import ContactUs from '../../components/ContactUs/ContactUs.jsx';
+
 // import { Parallax } from 'react-scroll-parallax';
 // import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
 
@@ -111,6 +113,7 @@ function Home() {
             <div className="carousel-pic4"></div>
           </Carousel.Item>
         </Carousel>
+        {/* <Modal /> */}
         <div className="fill-box">
           <img src={FillBox} alt="Fill Box" />
 

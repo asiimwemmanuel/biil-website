@@ -4,7 +4,7 @@ const Context = createContext({
   isDrop: false,
   modal: false,
   animateCart: false,
-  contactCard: false,
+  contactCard: true,
   setContactCard: () => {},
   setModalVal: () => {},
   setIsDropVal: () => {},

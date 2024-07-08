@@ -46,7 +46,7 @@
 .logo2{
     font-family: 'Volterra-Regular' !important;
     text-decoration: none !important;
-    color: #000000 !important
+    color: #000000 !important;
      /* background: linear-gradient(to bottom, #ffffff, #e8e8e8, #5a5a5a) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
@@ -71,18 +71,6 @@
   margin-left: 10px;
  
 }
-
-
-
-/* #logo-h2{
-  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-    background-size: 400% 400%;
-    animation: rainbow 3s linear infinite;
-    -webkit-background-clip: text;
-    background-clip:text;
-    -webkit-text-fill-color: transparent;
-} */
-
 
 /* Define the rainbow gradient animation */
   @keyframes rainbow {
