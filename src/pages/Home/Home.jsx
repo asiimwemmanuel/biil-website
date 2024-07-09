@@ -72,59 +72,58 @@ function Home() {
       <h2 className="explore">Explore our locations</h2>
       <div className="cardDiv">
         <Card
-          title="Kitetika bungalows"
+          title="Kitetika Bungalows"
           price={500000}
           image={CardImg1}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 1 bathroom"
         />
         <Card
-          title="Janda bungalows"
+          title="Janda Bungalows"
           price={800000}
           image={CardImg2}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 2 bathrooms"
         />
         <Card
-          title="Bulenga flats"
+          title="Bulenga Flats"
           price={500000}
           image={CardImg3}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 2 bathrooms"
         />
         <Card
           title="Mbalwa Bungalows"
           price={600000}
           image={CardImg4}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 1 bathroom"
         />
         <Card
           title="Zanna Bungalows"
           price={700000}
           image={CardImg5}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 1 bathroom"
         />
         <Card
-          title="Nnajanamkumbi Bungalow"
+          title="Najjanankumbi Bungalow"
           price={1000000}
           image={CardImg6}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 1 bathroom"
         />
         <Card
           title="Kabowa Bungalow"
           price={1500000}
           image={CardImg7}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="3 bedrooms, 1 bathroom"
         />
         <Card
-          title="Kyebando"
+          title="Kabowa micro-residences"
           price={300000}
           image={CardImg8}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="1 bedroom, 1 bathroom"
         />
-
         <Card
-          title="Kyebando"
+          title="Kabowa Apartments"
           price={1200000}
           image={CardImg9}
-          description="3 bedroom Apartments and Office Rental Space Available"
+          description="2 bedrooms, 2 bathrooms"
         />
       </div>
       <div className="map-container">
