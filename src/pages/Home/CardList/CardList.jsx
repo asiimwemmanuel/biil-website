@@ -15,59 +15,68 @@ const cardData = [
     title: "Kitetika Bungalows",
     price: 500000,
     image: CardImg1,
-    description: "2 bedrooms, 1 bathroom"
+    description: "2 bedrooms, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScbibvgHFiD9XLLqKOI6lzD609Gay1_j-mGiazOmRR58i9sjQ/viewform",
   },
   {
     title: "Janda Bungalows",
     price: 800000,
     image: CardImg2,
-    description: "2 bedrooms, 2 bathrooms"
+    description: "2 bedrooms, 2 bathrooms",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScGF1cXNsPOKFBaDMftH33-vw5dmhNAH9m-FTGh-RJopMjJuA/viewform",
   },
   {
     title: "Bulenga Flats",
     price: 500000,
     image: CardImg3,
-    description: "2 bedrooms, 2 bathrooms"
+    description: "2 bedrooms, 2 bathrooms",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfm9qzSy6FNQNCnSrSx1p8WKZxdGpccNSRH6nzW1lG2q_NGOg/viewform",
   },
   {
     title: "Mbalwa Bungalows",
     price: 600000,
     image: CardImg4,
-    description: "2 bedrooms, 1 bathroom"
+    description: "2 bedrooms, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSc84YZpvjGgjBJcgpEvkaIrJpFr0TZjNl60Z167gTOezkw4MA/viewform",
   },
   {
     title: "Zanna Bungalows",
     price: 700000,
     image: CardImg5,
-    description: "2 bedrooms, 1 bathroom"
+    description: "2 bedrooms, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSc4F8YyqeQWztgjIE5hWmztEBbhREQMKkbM348c_OAJ6gVA_g/viewform",
   },
   {
     title: "Najjanankumbi Bungalow",
     price: 1000000,
     image: CardImg6,
-    description: "2 bedrooms, 1 bathroom"
+    description: "2 bedrooms, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScgNxszNqGswiJZt5AhbNdSNcNEqawmYtJHeJcEXOFf4PR5KQ/viewform",
   },
   {
     title: "Kabowa Bungalow",
     price: 1500000,
     image: CardImg7,
-    description: "3 bedrooms, 1 bathroom"
+    description: "3 bedrooms, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSe2mkoEKa0Dswopbtjt9fL3bS2yzzsztcig3k2rQdoXKLTgaA/viewform",
   },
   {
     title: "Kabowa micro-residences",
     price: 300000,
     image: CardImg8,
-    description: "1 bedroom, 1 bathroom"
+    description: "1 bedroom, 1 bathroom",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfhpOHdPwj6u6ucf5xsRlk2Lsl5NrWqM_cP7WJ_-BLw6AW4lQ/viewform",
   },
   {
     title: "Kabowa Apartments",
     price: 1200000,
     image: CardImg9,
-    description: "2 bedrooms, 2 bathrooms"
+    description: "2 bedrooms, 2 bathrooms",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSeguM6NHb3fwzTVZ728j_6FWWRIEPpfSkjsfamLpzIUX_FPaw/viewform",
   }
 ];
 
-const CardList = ({ onCardClick }) => (
+const CardList = () => (
   <div className="cardDiv">
     {cardData.map((card, index) => (
       <Card
@@ -76,7 +85,7 @@ const CardList = ({ onCardClick }) => (
         price={card.price}
         image={card.image}
         description={card.description}
-        onClick={() => onCardClick(index)}
+        url={card.url}
       />
     ))}
   </div>

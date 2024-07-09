@@ -1,20 +1,22 @@
-import React, { useState, useContext, useEffect } from 'react';
-import './Card.css';
-import Context from '../../Context/Context';
+import React, { useContext, useEffect, useState } from 'react';
 import { BsBuildingsFill } from 'react-icons/bs';
+import Context from '../../Context/Context';
+import './Card.css';
 
 function Card(props) {
-  const ctx = useContext(Context);
-  const [hovered, setHovered] = useState(false);
+  // const ctx = useContext(Context);
+  // const [hovered, setHovered] = useState(false);
 
-  const product = {
-    title: props.title,
-    price: props.price,
-    image: props.image.split('/').pop(),
-    description: props.description,
-  };
+  // const product = {
+  //   title: props.title,
+  //   price: props.price,
+  //   image: props.image.split('/').pop(),
+  //   description: props.description,
+  //   url: props.url
+  // };
 
   return (
+  <a href={props.url} target="_blank" rel="noopener noreferrer" className="card">
     <div className="cardd">
       <img className="card-img" src={props.image} alt={props.image} />
       <BsBuildingsFill style={{ height: '25px', width: '25px' }} />
@@ -46,6 +48,7 @@ function Card(props) {
         </p>
       </div>
     </div>
+  </a>
   );
 }
 

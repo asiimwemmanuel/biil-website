@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
-import './Header.css';
-import { NavLink, Link } from 'react-router-dom';
-import Context from '../../Context/Context';
-import DropDown from '../Drop-Down/DropDown';
+import React, { useContext, useEffect, useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
-import Hope from '/src/assets/hope.jpg';
-import Reckless from '/src/assets/Reckless.png';
-import Overthinker from '/src/assets/DOTI.jpeg';
+import { Link, NavLink } from 'react-router-dom';
+import Context from '../../Context/Context';
 import Cart from '../Cart/Cart.jsx';
 import ContactUs from '../ContactUs/ContactUs.jsx';
+import DropDown from '../Drop-Down/DropDown';
+import './Header.css';
+import Overthinker from '/src/assets/DOTI.jpeg';
+import Hope from '/src/assets/hope.jpg';
+import Reckless from '/src/assets/Reckless.png';
 
 function Header() {
   const ctx = useContext(Context);
@@ -57,57 +57,13 @@ function Header() {
             About Us
           </NavLink>
         </div>
-        {/* <div className="search-container">
-          <CiSearch
-            style={{
-              height: '28px',
-              width: '28px',
-              cursor: 'pointer',
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Search for products..."
-            className="search-box"
-            value={searchTerm}
-            onChange={handleChange}
-          />
-          <div className="search-underline"></div>
-          <div className="search-results">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="search-item"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-              >
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="product-image"
-                  style={{
-                    height: '80px',
-                    width: '80px',
-                    borderRadius: '50px',
-                    objectFit: 'cover',
-                  }}
-                />
-                <p style={{ marginLeft: '10px' }}>{product.title}</p>
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
       <div
         className="icons-container"
         style={{
           display: 'flex',
           justifyContent: 'flex-end',
-          alignItems: 'center',
+          alignItems: 'right',
           paddingRight: '10px',
           // marginRight: '-80px',
         }}
@@ -116,6 +72,9 @@ function Header() {
           className="contact-btn"
           onClick={() => {
             ctx.setContactCard(true);
+            setTimeout(() => {
+              window.open('https://docs.google.com/forms/d/e/1FAIpQLSdJFX34ynYmdiQf1M15EzUfiobW13wEZq01LRIPjBgrei7tKw/viewform?usp=sf_link', '_blank');
+            }, 3000);
           }}
         >
           Contact Us
