@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import './Home.css';
-import Header from '../../components/Header/Header';
-import Card from '../../components/Card/Card';
+import Carousel from 'react-bootstrap/Carousel';
 import CardImg1 from '../../assets/card-img1.jpeg';
 import CardImg2 from '../../assets/card-img2.jpeg';
 import CardImg3 from '../../assets/card-img3.jpeg';
@@ -11,80 +9,20 @@ import CardImg6 from '../../assets/card-img6.jpeg';
 import CardImg7 from '../../assets/card-img7.jpeg';
 import CardImg8 from '../../assets/card-img8.jpeg';
 import CardImg9 from '../../assets/card-img9.jpeg';
-// import Pic3 from '/src/assets/image3.png';
-// import Pic2 from '/src/assets/image2.png';
-import Footer from '../../components/Footer/footer';
 import FillBox from '../../assets/Fill-Box.png';
-import Carousel from 'react-bootstrap/Carousel';
-import Map from '../../components/Map/Map.jsx';
+import Card from '../../components/Card/Card';
 import ContactUs from '../../components/ContactUs/ContactUs.jsx';
-
-// import { Parallax } from 'react-scroll-parallax';
-// import ScrollDownButton from '../../components/ScrollDownButton/ScrollDownButton.jsx';
+import Footer from '../../components/Footer/footer';
+import Header from '../../components/Header/Header';
+import Map from '../../components/Map/Map.jsx';
+import './Home.css';
 
 function Home() {
   useEffect(() => {
     if (!localStorage.getItem('CartItems')) {
       localStorage.setItem('CartItems', '[]');
     }
-
-    // // Check if the screen width is greater than 12 inches (1200 pixels)
-    // if (window.innerWidth > 900) {
-    //   const handleScroll = () => {
-    //     const scrollTop = window.scrollY;
-    //     const modelsPic = document.querySelector('.models-pic');
-    //     const modelsPic2 = document.querySelector('.models-pic2');
-    //     modelsPic.style.backgroundPositionY = `${scrollTop * 0.5}px`; // Adjust the parallax effect speed as needed
-    //     modelsPic2.style.backgroundPositionY = `${scrollTop * -0.1}px`; // Adjust the parallax effect speed as needed
-    //   };
-
-    //   window.addEventListener('scroll', handleScroll);
-
-    //   return () => {
-    //     window.removeEventListener('scroll', handleScroll);
-    //   };
-    // }
   }, []);
-  async function sendProductDataToFirebase(productName, description) {
-    // Firebase URL
-    const firebaseUrl =
-      'https://conspiracy-67f09-default-rtdb.firebaseio.com/products.json';
-
-    // Data to be sent
-    const data = {
-      productName: productName,
-      description: description,
-    };
-
-    // Request options
-    const requestOptions = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    };
-
-    try {
-      // Make the fetch request
-      const response = await fetch(firebaseUrl, requestOptions);
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const responseData = await response.json();
-      console.log('Data sent successfully:', responseData);
-      // Handle success
-    } catch (error) {
-      console.error('Error sending data to Firebase:', error.message);
-      // Handle error
-    }
-  }
-  // sendProductDataToFirebase(
-  //   'T-Shirts',
-  //   'Step into style with our chic T-shirts. Discover our trendy T-shirts, crafted for comfort and style.'
-  // );
 
   return (
     <div
