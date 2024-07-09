@@ -54,18 +54,26 @@
 
 }
 
-.Menu-icon{
-  height:28px;
-  width:28px;
+.Menu-icon {
+  height: 28px;
+  width: 28px;
   cursor: pointer;
+  margin-right: 20px;
+  /* Add space from the right viewport border */
+  margin-top: 10px;
+  /* Optional: Add space from the top viewport border */
+  margin-bottom: 10px;
+  /* Optional: Add space from the bottom viewport border */
   /* margin-left: 10px; */
+  /* If you need space from the left border, uncomment and adjust */
+  /* Ensure there's enough space if you add it */
 }
 
 .logo-container {
   padding-top:15px;
   padding-bottom:5px;
   display:flex;
-  flex:2;
+  flex:1;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 10px;
@@ -82,6 +90,18 @@
 .nav-links {
   display: flex;
   margin-right: 20px; /* Add margin to the right of the nav links */
+  align-items: center;
+    gap: 20px;
+    /* Space between buttons */
+}
+
+.nav-container {
+  display: flex;
+  flex: 1;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+  /* Space between nav links */
 }
 
 .NavLink {

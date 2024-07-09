@@ -48,52 +48,35 @@ function Header() {
           </h1>
         </Link>
       </div>
-      <div className="central-header-div">
+      <div className="nav-container">
         <div className="nav-links">
-          <NavLink to="/" className="NavLink" style={{ marginLeft: '50px' }}>
+          <NavLink to="/" className="NavLink">
             Home
           </NavLink>
           <NavLink to="/about" className="NavLink">
             About Us
           </NavLink>
-        </div>
-      </div>
-      <div
-        className="icons-container"
-        style={{
-          display: 'flex',
-          justifyContent: 'flex-end',
-          alignItems: 'right',
-          paddingRight: '10px',
-          // marginRight: '-80px',
-        }}
-      >
-        <button
-          className="contact-btn"
-          onClick={() => {
-            ctx.setContactCard(true);
-            setTimeout(() => {
-              window.open('https://docs.google.com/forms/d/e/1FAIpQLSdJFX34ynYmdiQf1M15EzUfiobW13wEZq01LRIPjBgrei7tKw/viewform?usp=sf_link', '_blank');
-            }, 3000);
-          }}
-        >
-          Contact Us
-        </button>
-        <div
-          style={{
-            display: 'flex',
-          }}
-        >
-          <FiMenu
-            className="Menu-icon"
+          <button
+            className="contact-btn"
             onClick={() => {
-              ctx.setIsDropVal(true);
+              ctx.setContactCard(true);
+              setTimeout(() => {
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLSdJFX34ynYmdiQf1M15EzUfiobW13wEZq01LRIPjBgrei7tKw/viewform?usp=sf_link', '_blank');
+              }, 3000);
             }}
-            style={{
-              color: scrollPosition > scrollThreshold ? '#000000' : '#ffffff',
-            }}
-          />
+          >
+            Contact Us
+          </button>
         </div>
+        <FiMenu
+          className="Menu-icon"
+          onClick={() => {
+            ctx.setIsDropVal(true);
+          }}
+          style={{
+            color: scrollPosition > scrollThreshold ? '#000000' : '#ffffff',
+          }}
+        />
       </div>
     </div>
   );
