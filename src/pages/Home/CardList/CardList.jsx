@@ -1,5 +1,5 @@
 import React from 'react';
-import CardImg1 from '../../../assets/card-img1.jpeg'; // Adjust the path based on where images are located
+import CardImg1 from '../../../assets/card-img1.jpeg';
 import CardImg2 from '../../../assets/card-img2.jpeg';
 import CardImg3 from '../../../assets/card-img3.jpeg';
 import CardImg4 from '../../../assets/card-img4.jpeg';
@@ -8,7 +8,7 @@ import CardImg6 from '../../../assets/card-img6.jpeg';
 import CardImg7 from '../../../assets/card-img7.jpeg';
 import CardImg8 from '../../../assets/card-img8.jpeg';
 import CardImg9 from '../../../assets/card-img9.jpeg';
-import Card from '../../../components/Card/Card'; // Adjust the path based on where Card is located
+import Card from '../../../components/Card/Card';
 
 const cardData = [
   {
@@ -67,7 +67,7 @@ const cardData = [
   }
 ];
 
-const CardList = () => (
+const CardList = ({ onCardClick }) => (
   <div className="cardDiv">
     {cardData.map((card, index) => (
       <Card
@@ -76,6 +76,7 @@ const CardList = () => (
         price={card.price}
         image={card.image}
         description={card.description}
+        onClick={() => onCardClick(index)}
       />
     ))}
   </div>

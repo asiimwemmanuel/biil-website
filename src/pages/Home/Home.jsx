@@ -1,151 +1,133 @@
-import React, { useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import CardImg1 from '../../assets/card-img1.jpeg';
-import CardImg2 from '../../assets/card-img2.jpeg';
-import CardImg3 from '../../assets/card-img3.jpeg';
-import CardImg4 from '../../assets/card-img4.jpeg';
-import CardImg5 from '../../assets/card-img5.jpeg';
-import CardImg6 from '../../assets/card-img6.jpeg';
-import CardImg7 from '../../assets/card-img7.jpeg';
-import CardImg8 from '../../assets/card-img8.jpeg';
-import CardImg9 from '../../assets/card-img9.jpeg';
-import FillBox from '../../assets/Fill-Box.png';
-import Card from '../../components/Card/Card';
-import ContactUs from '../../components/ContactUs/ContactUs.jsx';
-import Footer from '../../components/Footer/footer';
-import Header from '../../components/Header/Header';
-import Map from '../../components/Map/Map.jsx';
-import './Home.css';
+// issue with click event logic
+
+import React, { useEffect, useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import FillBox from "../../assets/Fill-Box.png";
+import ContactUs from "../../components/ContactUs/ContactUs.jsx";
+import Footer from "../../components/Footer/footer";
+import Header from "../../components/Header/Header";
+import Map from "../../components/Map/Map.jsx";
+import CardList from "./CardList/CardList.jsx";
+import "./Home.css";
 
 function Home() {
-  useEffect(() => {
-    if (!localStorage.getItem('CartItems')) {
-      localStorage.setItem('CartItems', '[]');
-    }
-  }, []);
+	const [showPopup, setShowPopup] = useState(false);
+	const [iframeSrc, setIframeSrc] = useState("");
 
-  return (
-    <div
-      style={{
-        color: 'white',
-        width: '100vw',
-        position: 'absolute',
-        height: '100vh',
-        top: 0,
-        left: 0,
-      }}
-    >
-      <Header />
-      <div style={{ overflowX: 'hidden' }}>
-        <Carousel indicators={false} interval={3000}>
-          <Carousel.Item>
-            <div className="carousel-pic"></div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="carousel-pic2"></div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="carousel-pic3"></div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="carousel-pic4"></div>
-          </Carousel.Item>
-        </Carousel>
-        {/* <Modal /> */}
-        <div className="fill-box">
-          <img src={FillBox} alt="Fill Box" />
+	const formURLs = [
+		"https://docs.google.com/forms/d/e/1FAIpQLScbibvgHFiD9XLLqKOI6lzD609Gay1_j-mGiazOmRR58i9sjQ/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLScGF1cXNsPOKFBaDMftH33-vw5dmhNAH9m-FTGh-RJopMjJuA/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSfm9qzSy6FNQNCnSrSx1p8WKZxdGpccNSRH6nzW1lG2q_NGOg/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSc84YZpvjGgjBJcgpEvkaIrJpFr0TZjNl60Z167gTOezkw4MA/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSc4F8YyqeQWztgjIE5hWmztEBbhREQMKkbM348c_OAJ6gVA_g/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLScgNxszNqGswiJZt5AhbNdSNcNEqawmYtJHeJcEXOFf4PR5KQ/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSe2mkoEKa0Dswopbtjt9fL3bS2yzzsztcig3k2rQdoXKLTgaA/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSfhpOHdPwj6u6ucf5xsRlk2Lsl5NrWqM_cP7WJ_-BLw6AW4lQ/viewform?embedded=true",
+		"https://docs.google.com/forms/d/e/1FAIpQLSeguM6NHb3fwzTVZ728j_6FWWRIEPpfSkjsfamLpzIUX_FPaw/viewform?embedded=true",
+	];
 
-          <div className="fill-box-text">Your Perfect</div>
-        </div>
-        <h1
-          className="fill-box-text"
-          style={{
-            marginTop: '-75px',
-            fontSize: '130px',
-            // backgroundColor: 'blue',
-            padding: '0px',
-          }}
-        >
-          Home
-        </h1>
-      </div>
-      <h2 className="explore">Explore our locations</h2>
-      <div className="cardDiv">
-        <Card
-          title="Kitetika Bungalows"
-          price={500000}
-          image={CardImg1}
-          description="2 bedrooms, 1 bathroom"
-        />
-        <Card
-          title="Janda Bungalows"
-          price={800000}
-          image={CardImg2}
-          description="2 bedrooms, 2 bathrooms"
-        />
-        <Card
-          title="Bulenga Flats"
-          price={500000}
-          image={CardImg3}
-          description="2 bedrooms, 2 bathrooms"
-        />
-        <Card
-          title="Mbalwa Bungalows"
-          price={600000}
-          image={CardImg4}
-          description="2 bedrooms, 1 bathroom"
-        />
-        <Card
-          title="Zanna Bungalows"
-          price={700000}
-          image={CardImg5}
-          description="2 bedrooms, 1 bathroom"
-        />
-        <Card
-          title="Najjanankumbi Bungalow"
-          price={1000000}
-          image={CardImg6}
-          description="2 bedrooms, 1 bathroom"
-        />
-        <Card
-          title="Kabowa Bungalow"
-          price={1500000}
-          image={CardImg7}
-          description="3 bedrooms, 1 bathroom"
-        />
-        <Card
-          title="Kabowa micro-residences"
-          price={300000}
-          image={CardImg8}
-          description="1 bedroom, 1 bathroom"
-        />
-        <Card
-          title="Kabowa Apartments"
-          price={1200000}
-          image={CardImg9}
-          description="2 bedrooms, 2 bathrooms"
-        />
-      </div>
-      <div className="map-container">
-        <h1
-          style={{
-            color: 'black',
-            fontFamily: 'Volterra-Regular',
-            fontSize: '35px',
-            marginTop: '30px',
-          }}
-        >
-          BIIL
-        </h1>
-        <p style={{ color: '#000000' }}>
-          Get directions to our <br />
-          locations using the map
-        </p>
-        <Map />
-      </div>
-      <Footer />
-    </div>
-  );
+	const handleCardClick = (index) => {
+		setIframeSrc(formURLs[index]);
+		setShowPopup(!showPopup);
+	};
+
+	useEffect(() => {
+		if (!localStorage.getItem("CartItems")) {
+			localStorage.setItem("CartItems", "[]");
+		}
+	}, []);
+
+	return (
+		<div
+			style={{
+				color: "white",
+				width: "100vw",
+				position: "absolute",
+				height: "100vh",
+				top: 0,
+				left: 0,
+			}}
+		>
+			<Header />
+			<div style={{ overflowX: "hidden" }}>
+				<Carousel indicators={false} interval={3000}>
+					<Carousel.Item>
+						<div className="carousel-pic"></div>
+					</Carousel.Item>
+					<Carousel.Item>
+						<div className="carousel-pic2"></div>
+					</Carousel.Item>
+					<Carousel.Item>
+						<div className="carousel-pic3"></div>
+					</Carousel.Item>
+					<Carousel.Item>
+						<div className="carousel-pic4"></div>
+					</Carousel.Item>
+				</Carousel>
+				{/* <Modal /> */}
+				<div className="fill-box">
+					<img src={FillBox} alt="Fill Box" />
+					<div className="fill-box-text">Your Perfect</div>
+				</div>
+				<h1
+					className="fill-box-text"
+					style={{
+						marginTop: "-75px",
+						fontSize: "130px",
+						padding: "0px",
+					}}
+				>
+					Home
+				</h1>
+			</div>
+			<h2 className="explore">Explore our locations</h2>
+			<div className="cardDiv">
+				<CardList onCardClick={handleCardClick} />
+			</div>
+			<div className="map-container">
+				<h1
+					style={{
+						color: "black",
+						fontFamily: "Volterra-Regular",
+						fontSize: "35px",
+						marginTop: "30px",
+					}}
+				>
+					BIIL
+				</h1>
+				<p style={{ color: "#000000" }}>
+					Get directions to our <br />
+					locations using the map
+				</p>
+				<Map />
+			</div>
+			<Footer />
+
+			{/* Popup Modal - code gud */}
+			{showPopup && (
+				<div className="popup">
+					<div className="popup-content">
+						<span
+							onClick={() => setShowPopup(false)}
+							className="close-btn"
+						>
+							&times;
+						</span>
+						<iframe
+							src={iframeSrc}
+							width="640"
+							height="739"
+							frameborder="0"
+							marginheight="0"
+							marginwidth="0"
+						>
+							Loading…
+						</iframe>
+					</div>
+				</div>
+			)}
+		</div>
+	);
 }
 
 export default Home;
