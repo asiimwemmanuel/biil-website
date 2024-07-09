@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from 'react';
-import './ContactUs.css';
-import Context from '../../Context/Context';
-import { Link } from 'react-router-dom';
 import { FaInstagram } from 'react-icons/fa';
-import { MdOutlineEmail } from 'react-icons/md';
-import { IoClose } from 'react-icons/io5';
 import { IoIosCall } from 'react-icons/io';
+import { IoClose } from 'react-icons/io5';
+import { MdOutlineEmail } from 'react-icons/md';
+import { Link } from 'react-router-dom';
+import Context from '../../Context/Context';
+import './ContactUs.css';
 
 function ContactUs() {
   const ctx = useContext(Context);
@@ -33,21 +33,19 @@ function ContactUs() {
         <p
           style={{ color: '#000000', marginLeft: '10px', marginRight: '10px' }}
         >
-          Hello, Feel free to contact the members of the Biil House using the
+          Hello, Feel free to contact the members of the BIIL House using the
           contact details below. We're here to help and provide you with housing
           that suits you!
         </p>
         <div className="contact-content" style={{ maxHeight: '500px' }}>
           <div className="contact-item1">
-            <Link
-              to="https://www.instagram.com/conspiracyug/"
-              target="_blank"
+            <div
               className="contact-link"
               style={{ color: '#004cb0' }}
             >
               <IoIosCall className="icon" />
               +256 772 403916
-            </Link>
+            </div>
           </div>
           <div className="contact-item2">
             <a

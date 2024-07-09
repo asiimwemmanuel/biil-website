@@ -59,10 +59,10 @@ function Header() {
           <button
             className="contact-btn"
             onClick={() => {
-              ctx.setContactCard(true);
               setTimeout(() => {
                 window.open('https://docs.google.com/forms/d/e/1FAIpQLSdJFX34ynYmdiQf1M15EzUfiobW13wEZq01LRIPjBgrei7tKw/viewform?usp=sf_link', '_blank');
               }, 3000);
+              ctx.setContactCard(true);
             }}
           >
             Contact Us
