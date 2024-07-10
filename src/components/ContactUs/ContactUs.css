@@ -52,6 +52,7 @@
 
 .close-btn {
   cursor: pointer;
+  text-align: center;
   font-size: 24px;
 }
 
