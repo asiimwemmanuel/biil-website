@@ -1,8 +1,8 @@
 import React from 'react';
-import ProfilePic from '../../assets/images/barry-wood.png';
 import bdo from '../../assets/images/bdo.jpg';
 import ceo from '../../assets/images/ceo.jpg';
 import ea from '../../assets/images/ea.jpg';
+import fs from '../../assets/images/fs.jpg';
 import rem from '../../assets/images/rem.jpg';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
@@ -30,7 +30,7 @@ const profiles = [
   {
     name: 'Prosper Kahwezi',
     title: 'Field Supervisor',
-    img: ProfilePic,
+    img: fs,
     description: `Prosper Kahweezi, Field Supervisor at BIIL, oversees on-site operations to ensure quality and efficiency. He supervises field staff, coordinates tasks, and ensures safety compliance. As a liaison between management and field workers, Prosper ensures project objectives are met and provides on-the-ground support to resolve issues and optimize performance.`,
   },
   {
