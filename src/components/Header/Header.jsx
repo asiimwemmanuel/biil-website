@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Link, NavLink } from 'react-router-dom';
 import Context from '../../Context/Context';
-import Cart from '../Cart/Cart.jsx';
 import ContactUs from '../ContactUs/ContactUs.jsx';
 import DropDown from '../Drop-Down/DropDown';
 import './Header.css';
@@ -28,7 +27,6 @@ function Header() {
     <div className="header">
       <div className="backdrop"></div>
       {ctx.isDrop ? <DropDown /> : ''}
-      {ctx.modal ? <Cart /> : ''}
       {ctx.contactCard ? <ContactUs /> : ''}
       <div className="logo-container">
         <Link
