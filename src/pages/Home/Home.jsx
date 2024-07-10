@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import FillBox from "../../assets/Fill-Box.png";
-import ContactUs from "../../components/ContactUs/ContactUs.jsx";
+import FillBox from "../../assets/images/Fill-Box.png";
 import Footer from "../../components/Footer/footer";
 import Header from "../../components/Header/Header";
 import Map from "../../components/Map/Map.jsx";

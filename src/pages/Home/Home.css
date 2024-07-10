@@ -1,5 +1,5 @@
 /* .models{
-  background-image: url(../../assets/Models.png);
+  background-image: url(../../assets/images/Models.png);
 } */
 
 .map-container {
@@ -26,7 +26,7 @@
 .carousel-pic{
   width: 100vw;
   height:500px;
-  background-image: url(../../assets/HomePage_Gigantico.jpeg);
+  background-image: url(../../assets/images/HomePage_Gigantico.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,7 +41,7 @@
 .carousel-pic2{
   width: 100vw;
   height: 500px;
-  background-image: url(../../assets/Carousel-img-2.jpeg);
+  background-image: url(../../assets/images/Carousel-img-2.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -56,7 +56,7 @@
 .carousel-pic3{
   width: 100vw;
   height: 500px;
-  background-image: url(../../assets/Carousel-img-3.jpeg);
+  background-image: url(../../assets/images/Carousel-img-3.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -71,7 +71,7 @@
 .carousel-pic4{
   width: 100vw;
   height: 500px;
-  background-image: url(../../assets/Carousel-img-4.jpeg);
+  background-image: url(../../assets/images/Carousel-img-4.jpeg);
   background-position: center center; 
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,7 +90,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 104vw; /* Adjust this value as needed to make it wider than the viewport */
-  height: 104px; /* Adjust height as needed */
+  height: 137px; /* Adjust height as needed */
   object-fit: cover;
   display: flex;
   justify-content: center;
@@ -199,7 +199,7 @@ background-size:cover;
 }
 
 .close-btn {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
   right: 20px;
   font-size: 30px;
