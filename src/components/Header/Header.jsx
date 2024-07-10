@@ -6,9 +6,6 @@ import Cart from '../Cart/Cart.jsx';
 import ContactUs from '../ContactUs/ContactUs.jsx';
 import DropDown from '../Drop-Down/DropDown';
 import './Header.css';
-import Overthinker from '/src/assets/DOTI.jpeg';
-import Hope from '/src/assets/hope.jpg';
-import Reckless from '/src/assets/Reckless.png';
 
 function Header() {
   const ctx = useContext(Context);
