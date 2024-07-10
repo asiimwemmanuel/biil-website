@@ -1,20 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import {
   createBrowserRouter,
-  RouterProvider,
-  Navigate,
+  RouterProvider
 } from 'react-router-dom';
 import Home from '../src/pages/Home/Home.jsx';
-import About from './pages/About/About';
 import ContextProvider from './Context/ContextProvider.jsx';
-import Orders from './pages/Orders/Orders.jsx';
+import './index.css';
+import About from './pages/About/About';
 import NotFound from './pages/NotFound/NotFound.jsx';
-import Coupons from './pages/Coupons/Coupons.jsx';
-// import { ParallaxProvider } from 'react-scroll-parallax';
 
 const router = createBrowserRouter([
   {
@@ -26,18 +21,9 @@ const router = createBrowserRouter([
     path: 'about',
     element: <About />,
   },
-
-  {
-    path: 'orders/:passcode',
-    element: <Orders />,
-  },
   {
     path: '*',
     element: <NotFound />,
-  },
-  {
-    path: 'coupons/:passcode',
-    element: <Coupons />,
   },
 ]);
 
