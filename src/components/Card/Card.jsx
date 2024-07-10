@@ -1,54 +1,45 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import { BsBuildingsFill } from 'react-icons/bs';
-import Context from '../../Context/Context';
 import './Card.css';
 
 function Card(props) {
-  // const ctx = useContext(Context);
-  // const [hovered, setHovered] = useState(false);
+  const { id, title, price, image, description, url } = props;
 
-  // const product = {
-  //   title: props.title,
-  //   price: props.price,
-  //   image: props.image.split('/').pop(),
-  //   description: props.description,
-  //   url: props.url
-  // };
+  const formattedPrice = id === 0 
+    ? `${price.toLocaleString('en-US')} USD / month` 
+    : `${price.toLocaleString('en-US')} UGX / month`;
 
   return (
-  <a href={props.url} target="_blank" rel="noopener noreferrer" className="card">
-    <div className="cardd">
-      <img className="card-img" src={props.image} alt={props.image} />
-      <BsBuildingsFill style={{ height: '25px', width: '25px' }} />
-      <div
-        style={{
-          paddingLeft: '10px',
-          paddingRight: '10px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-        }}
-      >
-        <h4
+    <a href={url} target="_blank" rel="noopener noreferrer" className='no-underline'>
+      <div className="card">
+        <img className="card-img" src={image} alt={image} />
+        <BsBuildingsFill style={{ height: '25px', width: '25px' }} />
+        <div
           style={{
-            color: '#000000',
-            margin: '5px',
-            fontSize: '19px',
+            paddingLeft: '10px',
+            paddingRight: '10px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection: 'column',
           }}
         >
-          {props.title}
-        </h4>
-        <p style={{ textAlign: 'center' }}>{`${props.price.toLocaleString(
-          'en-US'
-        )} UGX / month`}</p>
-
-        <p style={{ textAlign: 'center' }} className="card-description">
-          {props.description}
-        </p>
+          <h4
+            style={{
+              color: '#000000',
+              margin: '5px',
+              fontSize: '19px',
+            }}
+          >
+            {title}
+          </h4>
+          <p style={{ textAlign: 'center' }}>{formattedPrice}</p>
+          <p style={{ textAlign: 'center' }} className="card-description">
+            {description}
+          </p>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
   );
 }
 
