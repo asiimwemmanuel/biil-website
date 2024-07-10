@@ -1,9 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import { FaInstagram } from 'react-icons/fa';
 import { IoIosCall } from 'react-icons/io';
 import { IoClose } from 'react-icons/io5';
 import { MdOutlineEmail } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import Context from '../../Context/Context';
 import './ContactUs.css';
 
@@ -33,7 +31,7 @@ function ContactUs() {
         <p
           style={{ color: '#000000', marginLeft: '10px', marginRight: '10px' }}
         >
-          Hello, Feel free to contact the members of the BIIL House using the
+          Hello! Feel free to contact the members of the BIIL House using the
           contact details below. We're here to help and provide you with housing
           that suits you!
         </p>

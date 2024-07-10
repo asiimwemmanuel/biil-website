@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import FillBox from "../../assets/images/Fill-Box.png";
-import Footer from "../../components/Footer/footer";
+import CardList from "../../components/CardList/CardList.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 import Header from "../../components/Header/Header";
 import Map from "../../components/Map/Map.jsx";
-import CardList from "./CardList/CardList.jsx";
 import "./Home.css";
 
 function Home() {

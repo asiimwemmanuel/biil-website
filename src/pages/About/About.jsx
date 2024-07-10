@@ -4,7 +4,7 @@ import bdo from '../../assets/images/bdo.jpg';
 import ceo from '../../assets/images/ceo.jpg';
 import ea from '../../assets/images/ea.jpg';
 import rem from '../../assets/images/rem.jpg';
-import Footer from '../../components/Footer/footer';
+import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
 import './About.css';
 
