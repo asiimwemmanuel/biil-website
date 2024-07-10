@@ -3,7 +3,7 @@
 .footer {
   position:absolute;
   background-image: url(../../assets/images/Fill-Box.png);
-   background-position: center center; 
+  background-position: center center; 
   background-repeat: no-repeat;
   background-size: cover;
   left: 50%;
@@ -16,7 +16,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
 }
 
 .footer-about-us{
