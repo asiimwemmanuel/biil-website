@@ -30,9 +30,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ContextProvider>
-      {/* <ParallaxProvider> */}
       <RouterProvider router={router} />
-      {/* </ParallaxProvider> */}
     </ContextProvider>
   </React.StrictMode>
 );
