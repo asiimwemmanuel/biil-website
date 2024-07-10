@@ -1,12 +1,12 @@
 import React from 'react';
-import './About.css';
-import Header from '../../components/Header/Header';
+import ProfilePic from '../../assets/images/barry-wood.png';
+import bdo from '../../assets/images/bdo.jpg';
+import ceo from '../../assets/images/ceo.jpg';
+import ea from '../../assets/images/ea.jpg';
+import rem from '../../assets/images/rem.jpg';
 import Footer from '../../components/Footer/footer';
-import ceo from '../../assets/ceo.jpg';
-import ea from '../../assets/ea.jpg';
-import rem from '../../assets/rem.jpg';
-import ProfilePic from '../../assets/barry-wood.png';
-import bdo from '../../assets/bdo.jpg';
+import Header from '../../components/Header/Header';
+import './About.css';
 
 const profiles = [
   {
