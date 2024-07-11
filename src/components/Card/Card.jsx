@@ -6,8 +6,8 @@ function Card(props) {
   const { id, title, price, image, description, url } = props;
 
   const formattedPrice = id === 0 
-    ? `${price.toLocaleString('en-US')} USD / month` 
-    : `${price.toLocaleString('en-US')} UGX / month`;
+    ? `USD ${price.toLocaleString('en-US')} / month` 
+    : `UGX ${price.toLocaleString('en-US')} / month`;
 
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className='no-underline'>
@@ -33,7 +33,7 @@ function Card(props) {
           >
             {title}
           </h4>
-          <p style={{ textAlign: 'center' }}>{formattedPrice}</p>
+          <p style={{ textAlign: 'center' }}>starts at {formattedPrice}</p>
           <p style={{ textAlign: 'center' }} className="card-description">
             {description}
           </p>
